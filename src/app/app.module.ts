@@ -1,17 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { ChartsModule } from "ng2-charts";
+import { HttpClientModule } from "@angular/common/http";
+import { NgSelectModule } from "@ng-select/ng-select";
+import { FormsModule } from "@angular/forms";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
-import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
-import { Top5Component } from './pages/top5/top5.component';
-import { HistogramaComponent } from './pages/histograma/histograma.component';
-import { NavbarComponent } from './components/navigation/navbar/navbar.component';
-import { LineChartComponent } from './components/charts/line-chart/line-chart.component';
-import { BarChartComponent } from './components/charts/bar-chart/bar-chart.component';
-import { PieChartComponent } from './components/charts/pie-chart/pie-chart.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { InicioComponent } from "./pages/inicio/inicio.component";
+import { AcercaDeComponent } from "./pages/acerca-de/acerca-de.component";
+import { Top5Component } from "./pages/top5/top5.component";
+import { HistogramaComponent } from "./pages/histograma/histograma.component";
+import { NavbarComponent } from "./components/navigation/navbar/navbar.component";
+import { LineChartComponent } from "./components/charts/line-chart/line-chart.component";
+import { BarChartComponent } from "./components/charts/bar-chart/bar-chart.component";
+import { PieChartComponent } from "./components/charts/pie-chart/pie-chart.component";
 
 @NgModule({
   declarations: [
@@ -23,14 +26,17 @@ import { PieChartComponent } from './components/charts/pie-chart/pie-chart.compo
     NavbarComponent,
     LineChartComponent,
     BarChartComponent,
-    PieChartComponent
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
     ChartsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgSelectModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

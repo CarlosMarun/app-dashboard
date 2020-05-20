@@ -1,4 +1,20 @@
-<app-bar-chart 
-    titulo="Serie Histórica de Ventas por Año y Por Cliente"
-    (onClickButton)="recibeEvento($event)">
-</app-bar-chart>
+<ng-select
+  [clearable]="false"
+  class="m-4"
+  [items]="defaultBindingsListDim"
+  [(ngModel)]="selectedDimension"
+  (change)="onChangeDimension($event)"
+>
+</ng-select>
+<ng-select
+  [clearable]="false"
+  class="m-4"
+  [items]="defaultBindingsListOrder"
+  [(ngModel)]="selectedOrder"
+  (change)="onChangeOrder($event)"
+>
+</ng-select>
+<app-bar-chart
+  [barChartLabels]="labels"
+  [barChartData]="values"
+></app-bar-chart>

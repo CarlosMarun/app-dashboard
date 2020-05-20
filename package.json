@@ -1,5 +1,5 @@
 {
-  "name": "app-dashborad",
+  "name": "app-dashboard",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@ng-select/ng-select": "^4.0.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
     "ng2-charts": "^2.3.0",
